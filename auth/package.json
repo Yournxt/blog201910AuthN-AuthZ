@@ -1,0 +1,52 @@
+{
+  "name": "blog201910authn-authz",
+  "version": "1.0.0",
+  "description": "authN and authZ in nodejs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cross-env DEBUG=app* nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yournxt/blog201910AuthN-AuthZ.git"
+  },
+  "keywords": [
+    "nodejs",
+    "node",
+    "jwt",
+    "razorahul",
+    "rahul",
+    "thachilath"
+  ],
+  "author": "Rahul Thachilath",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yournxt/blog201910AuthN-AuthZ/issues"
+  },
+  "homepage": "https://github.com/Yournxt/blog201910AuthN-AuthZ#readme",
+  "dependencies": {
+    "body-parser": "1.19.0",
+    "chalk": "2.4.2",
+    "common": "../common",
+    "cookie-parser": "1.4.4",
+    "debug": "4.1.1",
+    "express": "4.17.1",
+    "morgan": "1.9.1",
+    "nodemon": "1.19.3",
+    "passport": "0.4.0",
+    "path": "0.12.7"
+  },
+  "nodemonConfig": {
+    "restartable": "rs",
+    "ignore": [
+      "node_modules/**/node_modules"
+    ],
+    "delay": "2000",
+    "env": {
+      "DEBUG_FILE": "/log.txt",
+      "NODE_ENV": "Development",
+      "PORT": 4002
+    }
+  }
+}
