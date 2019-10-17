@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "baf65ef0-8c30-4bbe-ae88-fe8be8aee748",
+		"name": "2019octblog",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4002/auth/v1/login",
+							"host": [
+								"localhost"
+							],
+							"port": "4002",
+							"path": [
+								"auth",
+								"v1",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login admin",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4002/auth/v1/loginAdmin",
+							"host": [
+								"localhost"
+							],
+							"port": "4002",
+							"path": [
+								"auth",
+								"v1",
+								"loginAdmin"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "regular access",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjIiLCJuYW1lIjoiQWRtaW4iLCJyb2xlcyI6WyJSRUdVTEFSIiwiQURNSU4iXSwidXBkYXRlZERhdGUiOiIyMDE5LTEwLTE3VDA5OjU1OjI0LjcxOFoiLCJpYXQiOjE1NzEzMDYxMjQsImV4cCI6MTU3Mzg5ODEyNH0.N0SbOUFCgQIpdWTTm0ZLj331wtLqksUZ-LZBlRS_vME",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:4002/auth/v1/regular",
+					"host": [
+						"localhost"
+					],
+					"port": "4002",
+					"path": [
+						"auth",
+						"v1",
+						"regular"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin access",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjIiLCJuYW1lIjoiQWRtaW4iLCJyb2xlcyI6WyJSRUdVTEFSIiwiQURNSU4iXSwidXBkYXRlZERhdGUiOiIyMDE5LTEwLTE3VDA5OjU1OjI0LjcxOFoiLCJpYXQiOjE1NzEzMDYxMjQsImV4cCI6MTU3Mzg5ODEyNH0.N0SbOUFCgQIpdWTTm0ZLj331wtLqksUZ-LZBlRS_vME"
+					}
+				],
+				"url": {
+					"raw": "localhost:4002/auth/v1/regular",
+					"host": [
+						"localhost"
+					],
+					"port": "4002",
+					"path": [
+						"auth",
+						"v1",
+						"regular"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
