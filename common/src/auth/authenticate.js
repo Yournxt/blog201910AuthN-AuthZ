@@ -20,19 +20,7 @@ module.exports = (req, res, next) => {
       const decoded = jwt.verify(token, AUTH.SECRET_KEY);
       debug(`debuged token ${JSON.stringify(decoded)}`);
       req.plainToken = decoded;
-
-      const inRangeDate = new Date(decoded.updatedDate);
-      inRangeDate.setDate(inRangeDate.getDate() - 5);
-
-      if (inRangeDate < new Date()) {
-        generateToken.generate(decoded.username, null, (err, rtoken) => {
-          if (err) return res.status(500).send('error updating token');
-          res.header('x-auth-token', rtoken.encoded);
-          req.plainToken = rtoken.plain;
-          next();
-        });
-      } else next();
-
+      next();
     } catch (ex) {
       debug(`Error decrypting token ${JSON.stringify(ex)}`);
       res.status(STATUS.FORBIDDEN).send('Unauthenticated access!');

@@ -1,4 +1,3 @@
-const QUERY = require('../constants/QUERY');
 const ENCODE = require('../auth/jwt.encoder');
 const debug = require('debug')('app: generateToken');
 
