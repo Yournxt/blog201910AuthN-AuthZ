@@ -26,6 +26,6 @@
   "homepage": "https://github.com/Yournxt/blog201910AuthN-AuthZ#readme",
   "dependencies": {
     "debug": "4.1.1",
-    "jsonwebtoken": "8.5.1"
+    "jsonwebtoken": "9.0.0"
   }
 }
